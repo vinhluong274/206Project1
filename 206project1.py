@@ -1,3 +1,8 @@
+#Vinh Luong
+#vinhbl@umich.edu
+#GITHUB USERNAME: vinhluong274
+#GITHUB REPO LINK: https://github.com/vinhluong274/206Project1
+
 import os
 import filecmp
 from datetime import datetime, date
@@ -156,20 +161,19 @@ def mySortPrint(a,col,fileName):
 #Input: list of dictionaries, key to sort by and output file name
 #Output: None
 	data_sorted = sorted(a, key=lambda item: item[col])
-	f = open("results.csv", "w")
+	f = open(fileName, "w")
 	string = ""
+	tuples = []
 	for i in data_sorted:
-		for (k, v) in i.items():
-			print(i)
-			string += v + ","
-			string = string.rstrip("\n")
-			print(string)
-			f.write(string)
+		tuples.append(sorted(i.items()))
 
-
-
-
-
+	for x in tuples:
+		fName = x[3][1]
+		lName = x[4][1]
+		Email = x[2][1]
+		line = fName + "," + lName + "," + Email
+		f.write(line)
+		f.write("\n")
 
 
 
