@@ -78,9 +78,6 @@ def classSizes(data):
 	return finalList
 
 
-
-
-
 # Find the most common day of the year to be born
 def findDay(a):
 # Input: list of dictionaries
@@ -116,7 +113,6 @@ def findDay(a):
 			numberCounts = counts
 			commonDay = number
 	return int(commonDay)
-
 
 
 # Find the average age (rounded) of the Students
