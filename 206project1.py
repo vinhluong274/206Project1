@@ -163,8 +163,10 @@ def mySortPrint(a,col,fileName):
 			print(i)
 			string += v + ","
 			string = string.rstrip("\n")
-			# print(string)
+			print(string)
 			f.write(string)
+
+
 
 
 
