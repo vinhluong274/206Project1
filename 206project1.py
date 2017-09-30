@@ -160,18 +160,20 @@ def findAge(a):
 def mySortPrint(a,col,fileName):
 #Input: list of dictionaries, key to sort by and output file name
 #Output: None
+#sorts data based on col and creates list of tuples
 	data_sorted = sorted(a, key=lambda item: item[col])
 	f = open(fileName, "w")
-	string = ""
 	tuples = []
 	for i in data_sorted:
 		tuples.append(sorted(i.items()))
 
+#Iterates through list of tuples and gets data appends data to line variable
+#Writes line to file with an additional comma and line break, because outfile.csv has an empty column
 	for x in tuples:
 		fName = x[3][1]
 		lName = x[4][1]
 		Email = x[2][1]
-		line = fName + "," + lName + "," + Email
+		line = fName + "," + lName + "," + Email + ","
 		f.write(line)
 		f.write("\n")
 
