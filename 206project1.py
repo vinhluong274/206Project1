@@ -52,7 +52,6 @@ def mySort(data,col):
 	return FullName
 
 
-
 #Create a histogram
 def classSizes(data):
 # Input: list of dictionaries
@@ -147,9 +146,7 @@ def findAge(a):
 		total += old
 	avg = total/(len(ages))
 	avg = math.floor(avg)
-
 	return avg
-
 
 #Similar to mySort, but instead of returning single
 #Student, all of the sorted data is saved to a csv file.
